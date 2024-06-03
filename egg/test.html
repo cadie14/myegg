@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Feed Them</title>
+	
+	<link href="local.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=VT323&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>
+	
+		<div class="bottom">
+			<h1>Feed Them</h1>
+		</div>
+	
+	<div class="startbtn"><a href="javascript:Start()">START</a></div>
+		
+	<div id="Q1"  class="ct">
+		<div><h2>Week I</h2></div>
+		<div class="q"><img src="img/inject.png" width="400" height="400" alt=""/>
+      </div>
+		<div>
+			<ul>
+				<li><a href="javascript:Ans(1,1)"><img src="img/t.png" width="100" height="100" alt=""/></a></li>
+				<li><a href="javascript:Ans(1,2)"><img src="img/m.png" width="100" height="100" alt=""/></a></li>
+				<li><a href="javascript:Ans(1,3)"><img src="img/b.png" width="100" height="100" alt=""/></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<script>
+		
+		let Tscore = 0;
+		let Mscore = 0;
+		let Bscore = 0;
+		
+		function Ans(QueN,QAns){
+		
+		if(QAns === 1){
+			Tscore = Tscore + 1
+			console.log('t+1');
+		}
+		if(QAns === 2){
+			Mscore = Mscore + 1
+			console.log('m+1');
+		}
+		if(QAns === 3){
+			Bscore = Bscore + 1
+			console.log('b+1');
+		}
+		
+		let NextQ = QueN + 1
+		
+		if(QueN != 3){
+			$("#Q" + QueN).fadeOut(200,function(){
+				$("#Q" + NextQ).fadeIn(200);
+		});
+		}
+			
+		if(QueN === 3){
+			$("#Q3").fadeOut(400,function(){
+				$("#report").fadeIn(1000);
+				
+				
+				if(Tscore === Mscore && Mscore === Bscore){
+					$("#report1").show();
+				}
+				
+				if(Tscore >= 3){
+					$("#report2").show();
+				}
+				
+				if(Mscore >= 3){
+					$("#report6").show();
+				}
+				
+				if(Bscore >= 3){
+					$("#report9").show();
+				}
+				
+				if(Tscore === 2 && Mscore === 1){
+					$("#report3").show();
+				}
+				
+				if(Tscore === 1 && Mscore === 2 && Bscore === 0){
+					$("#report10").show();
+				}
+				
+				if(Bscore === 1 && Mscore === 2){
+					$("#report8").show();
+				}
+				
+				if(Bscore === 2 && Mscore === 1){
+					$("#report7").show();
+				}
+				
+				if(Tscore === 1 && Bscore === 2){
+					$("#report5").show();
+				}
+				
+				if(Tscore === 2 && Bscore === 1){
+					$("#report4").show();
+				}
+		});
+		}
+			
+								   
+		//if(QueN === 1){
+//			$("#Q1").fadeOut(500,function(){
+//			$("#Q2").fadeIn(200);
+//			});
+//		}
+//			
+//		if(QueN === 2){
+//			$("#Q2").fadeOut(500,function(){
+//			$("#Q3").fadeIn(200);
+//			});
+//		}
+	}
+							 
+	</script>
+		
+	<div id="Q2" class="ct" >
+		<div><h2>Week II</h2></div>
+		<div class="q"><img src="img/inject2.png" width="400" height="400" alt=""/>
+		</div>
+		<div>
+			<ul>
+				<li><a href="javascript:Ans(2,1)"><img src="img/t.png" width="100" height="100" alt=""/></a></li>
+				<li><a href="javascript:Ans(2,2)"><img src="img/m.png" width="100" height="100" alt=""/></a></li>
+				<li><a href="javascript:Ans(2,3)"><img src="img/b.png" width="100" height="100" alt=""/></a></li>
+			</ul>
+		</div>
+	</div>
+		
+	<div class="ct" id="Q3">
+		<div class><h2>Week III</h2></div>
+		<div class="q"><img src="img/inject3.png" width="400" height="400" alt=""/></div>
+		<div>
+			<ul>
+				<li><a href="javascript:Ans(3,1)"><img src="img/t.png" width="100" height="100" alt=""/></a></li>
+				<li><a href="javascript:Ans(3,2)"><img src="img/m.png" width="100" height="100" alt=""/></a></li>
+				<li><a href="javascript:Ans(3,3)"><img src="img/b.png" width="100" height="100" alt=""/></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ct" id="report">
+		
+		<div class="reportct" id="report1"><img src="img/f.png" width="400" height="400" alt=""/><p>The answer is zero.</p></div>
+		<div class="reportct" id="report2"><img src="img/t3.png" width="400" height="400" alt=""/><p>They are deeply rooted.</p></div>
+		<div class="reportct" id="report3"><img src="img/tmml.png" width="400" height="400" alt=""/><p>Smell sweet.</p></div>
+		<div class="reportct" id="report4"><img src="/img/tmbl.png" width="400" height="400" alt=""/><p>Grow, grow, grow.</p></div>
+		<div class="reportct" id="report5"><img src="img/tlbm.png" width="400" height="400" alt=""/><p>You can hear them breathing.</p></div>
+		<div class="reportct" id="report6"><img src="img/m3.png" width="400" height="400" alt=""/><p>They're gone.</p></div>
+		<div class="reportct" id="report7"><img src="img/mlbm.png" width="400" height="400" alt=""/><p>The fallen.</p></div>
+		<div class="reportct" id="report8"><img src="img/mmbl.png" width="400" height="400" alt=""/><p>Fresh, smooth, and sweet too.</p></div>
+		<div class="reportct" id="report9"><img src="img/b3.png" width="400" height="400" alt=""/><p>They are moving.</p></div>
+		<div class="reportct" id="report10"><img src="img/tlmm.png" width="400" height="400" alt=""/><p>The sharp lament are surrounding you.</p></div>
+		
+		<div class="endbtn"><a href="javascript:Reload()">Feed more</a></div>
+		
+	</div>
+	
+</body>
+</html>
+
+<script>
+
+	
+	function Start(){
+		$(".startbtn").fadeOut(500,function(){
+			$("#Q1").fadeIn(200);
+		});
+		}
+
+	function Reload() {
+    	window.location.reload();
+		}
+		
+</script>

@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{
+		margin: 0;
+		height: 100%;
+		width: 100%
+	}
+	
+	body{
+		min-height: 100%;
+		margin:0;
+		background:#040404
+	}
+	
+	.top{
+		background-color: #A77252;
+		color: white;
+		text-align: center;
+		font-size:13px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+	.bottom{
+		background-color:#C3BCBC;
+		color: white;
+		text-align: center;
+		font-size:14px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		margin-top: 30px;
+	}
+	.at img{
+		display: block;
+		margin: 20px auto 0 auto;
+		width: 80%;
+		height: auto;
+		max-width: 1000px;
+	}
+	
+	.ct{
+		display: none;
+		/*box-shadow:0px 0px 10px 3px #C3BCBC;*/
+		width:calc(90% - 100px);
+		max-width: 940px;
+		background: #03B901;
+		margin:30px auto 0 auto;
+		padding: 30px;
+		border: medium #1C1C1C;
+		border-radius: 0px;
+	}
+
+	
+	h1,h2
+	{
+		color: #941D02;
+		font-size: 34px;
+		margin:0;
+		font-family: 'Silkscreen', sans-serif;
+}
+		
+	p,li
+	{
+		font-size: 18px;
+		/*margin:0 0 10px 0;*/
+		font-family: 'Silkscreen', sans-serif;
+		color: aliceblue;
+
+	}
+
+	li
+	{
+		margin-top: 10px;
+	}
+
+	a{text-decoration: none}
+	a:link{color:#7DA071}
+	a:hover{color:#C3AB64}
+	a:visited{color:#4E0B0B}
+	
+	li
+	{
+		/*border-bottom:dashed thin #E7E7E7;*/
+		list-style: none;
+		white-space:nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	
+	li::before
+	{
+		content: "  ";
+		color:#941D02;
+	}
+
+	.q{
+			/*background: #E7E2D4;*/
+			margin-top: 5px;
+			height:25px;
+			text-align: center;
+		}
+		
+	.startbtn{
+	/*	background: #CECECE; */
+		width: 180px;
+		height: 30px;
+		text-align: center;
+		padding-top: 25px;
+		/*border-radius: 30px;*/
+		display: block;
+		margin: 30px auto;
+		font-family: 'Silkscreen', sans-serif;
+		font-size: 34pt;
+		}
+
+	.reportct{
+		display: none;
+			margin-top: 0px;
+			height:25px;
+			text-align: center;
+		
+	}
+	.endbtn{
+			margin-top: 370px;
+			height:25px;
+			text-align: center;
+			font-family: 'Silkscreen', sans-serif;
+			font-size: 18px;
+	}
+
+	#report{
+		display: none;
+		height:360px;
+		margin: 30px auto;
+	}
